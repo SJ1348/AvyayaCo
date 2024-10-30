@@ -1,0 +1,125 @@
+/* styles/Home.module.css */
+
+.container {
+  font-family: Arial, sans-serif;
+  color: #f5f5f5;
+  background-color: #1b1f36;
+}
+
+/* ...other styles remain the same... */
+
+.howItWorks {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ffdd57;
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+.timelineItem:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.timelineContent {
+  background: #2a2f4a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #e1e4ed;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+  text-align: left;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+  text-align: right;
+}
+
+.timelineContent::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background: #ffdd57;
+  border-radius: 50%;
+}
+
+.timelineItem:nth-child(odd) .timelineContent::before {
+  left: -8px;
+  right: auto;
+}
+
+.howItWorksText {
+  margin-top: 2rem;
+  color: #b0b3c0;
+  font-size: 1rem;
+}
+
+.contact {
+  background-color: #22263a;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contactBanner {
+  text-align: center;
+  max-width: 600px;
+}
+
+.contactBanner h2 {
+  color: #ffdd57;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contactBanner p {
+  color: #b0b3c0;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contactButton {
+  background-color: #ffdd57;
+  color: #1b1f36;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #d9bb4a;
+}
